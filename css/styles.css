@@ -1,0 +1,345 @@
+* {
+  background-color: #000000;
+  font-family: "Merriweather", serif;
+  /* box-sizing: border-box; */
+  /* padding: 0;
+  margin: 0; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --------- Header Section --------- */
+#header {
+  width: 100%;
+  height: 100vh;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 8%;
+}
+
+.logo {
+  color: #66bfbf;
+  /* width: 200px;
+  font-family: "Sacramento", cursive; */
+}
+
+.header-container ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+.header-container ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+}
+
+.header-container ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #66bfbf;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transition: 0.2s;
+}
+
+.header-container ul li a:hover::after {
+  width: 100%;
+}
+
+.heading {
+  padding-top: 10%;
+  text-align: center;
+  color: #66bfbf;
+  font-size: 30px;
+  font-family: "Sacramento", cursive;
+}
+
+/* --------- About Section --------- */
+#about {
+  padding: 75px 0;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 8px 10%;
+}
+
+.about-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about-left-col {
+  flex-basis: 35%;
+}
+
+.about-right-col {
+  flex-basis: 60%;
+}
+
+.sub-title {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.about-right-col p {
+  color: #66bfbf;
+}
+
+/* --------- Team Section --------- */
+#team {
+  padding: 87px 0;
+}
+
+.team-container .sub-title {
+  text-align: center;
+}
+
+.team-columns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.team-columns img {
+  /* float: center; */
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.team-columns h2 {
+  color: #fff;
+  padding-left: 40px;
+}
+
+.team-columns p {
+  color: #66bfbf;
+  padding-left: 40px;
+}
+
+/* --------- Contact Section --------- */
+#contact {
+  padding: 45px 120px;
+}
+
+.sub-title {
+  text-align: center;
+}
+
+.contact-container p {
+  color: #66bfbf;
+}
+
+.contact-container h2 {
+  color: #fff;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-left-col {
+  flex-basis: 35%;
+  margin-right: 70px;
+}
+
+.contact-right-col {
+  flex-basis: 60%;
+}
+
+.contact-right-col i {
+  margin-right: 15px;
+  color: #fff;
+}
+
+.contact-right-col a {
+  color: #66bfbf;
+  text-decoration: none;
+}
+
+iframe {
+  margin-top: 20px;
+  width: 300px;
+  height: 200px;
+  filter: invert(100%);
+}
+
+/* --------- Copyright Section --------- */
+.copyright {
+  padding: 30px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.copyright span {
+  color: #66bfbf;
+}
+
+/* ------------- CSS for small screens ------------------- */
+nav .fa-solid {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  /* --------- Header Section --------- */
+  .heading {
+    margin-top: 25%;
+    font-size: 21px;
+  }
+
+  .sub-title {
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  .logo {
+    font-size: 13px;
+  }
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+    color: #fff;
+  }
+
+  nav ul {
+    background-color: #66bfbf;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 150px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+    color: #fff;
+  }
+
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  nav ul li a,
+  nav .fa-xmark {
+    background-color: #66bfbf;
+  }
+
+  /* --------- About Section --------- */
+
+  #about {
+    padding: 0;
+  }
+
+  .about-left-col,
+  .about-left-col {
+    flex-basis: 100%;
+  }
+
+  .about-left-col {
+    display: block;
+  }
+
+  .about-right-col {
+    flex: 1;
+    /* align-items: stretch; */
+  }
+
+  .about-right-col p {
+    font-size: 13px;
+  }
+
+  /* --------- Team Section --------- */
+  .team-container {
+    flex-basis: 100%;
+    flex: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .team-columns img {
+    width: 100px;
+    border-radius: 50px;
+    height: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+  }
+
+  .team-columns h2 {
+    padding-left: 20px;
+    font-size: 17px;
+  }
+
+  .team-columns p {
+    padding-left: 20px;
+    font-size: 12px;
+  }
+
+  .second-img-div {
+    padding-left: 50px;
+  }
+
+  .team-columns .h2-p {
+    padding-left: 14px;
+  }
+
+  /* --------- Contact Section --------- */
+  #contact {
+    padding: 0 15px;
+  }
+
+  .contact-container {
+    flex-basis: 100%;
+  }
+
+  .contact-container .sub-title {
+    font-size: 30px;
+  }
+
+  .contact-container h2 {
+    font-size: 17px;
+  }
+
+  .contact-container p {
+    font-size: 12px;
+  }
+
+  .contact-right-col a,
+  .contact-right-col i {
+    font-size: 12px;
+  }
+
+  iframe {
+    width: 180px;
+    height: 180px;
+  }
+
+  .copyright {
+    font-size: 16px;
+  }
+}
